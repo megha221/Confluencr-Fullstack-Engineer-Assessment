@@ -80,19 +80,4 @@ curl -s http://localhost:8000/v1/transactions/txn_abc123def456
 
 Duplicate the same POST several times; the lookup still returns a single row.
 
-## Deploy (Render)
 
-The public API must be on the cloud. One path:
-
-1. Push this repo to GitHub.
-2. Create a [Render](https://render.com) account and use **Blueprint** with `render.yaml`, or create:
-   - a **PostgreSQL** database
-   - a **Web Service** (Python) with start command `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-3. Set `DATABASE_URL` from the Render Postgres connection string (use the **internal** URL if the API is also on Render).
-4. Confirm `GET /` returns `HEALTHY`.
-
-Public URL goes in the submission README once deployed:
-
-```
-https://YOUR-SERVICE.onrender.com
-```
