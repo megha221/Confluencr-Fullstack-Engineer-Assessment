@@ -294,4 +294,3 @@ Confluencr/
 
 ---
 
-**Note:** The service is an assessment implementation demonstrating webhook ingestion, persistence, idempotency, and delayed processing. It is not intended to process real payments.
